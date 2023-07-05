@@ -1,12 +1,11 @@
 import DisplayProducts from "./DisplayProducts";
 import ProdEntry from "./ProdEntry";
-//import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
 import {useDispatch, useSelector} from 'react-redux';
 import {retrieve} from './recordSlice';
-import { Provider } from 'react-redux'
-import store from './storage';
+
 //Defining prodItem array  (input data)------------------------------------------------------------------------
-/*const defaultProducts =[
+const defaultProducts =[
     {
         prodCode:1,
         prodName: 'Purple Sweat Shirt',
@@ -42,7 +41,7 @@ import store from './storage';
         stock:60,
         image:'https://imgmedia.lbb.in/media/2020/06/5ef30f69773d1e0fff2287e9_1592987497887.jpg'
     }
-];*/
+];
 //-----------------------------------------------------------------------------------------------------------------
 
 //This function handles all things related to products-------------------------------------------------------------
@@ -101,7 +100,7 @@ export default function Products(props){
     }
 
     return (      
-        <Provider store={store}>
+        
         <div>
         <h2>Products</h2>
         {/*Toggle button to hide or show out of stock products--------------------------------------------------------------------- */}
@@ -156,6 +155,6 @@ export default function Products(props){
                              chkBox={chkBox}                        
             prodItems={prodItems} isHidden={isHidden} />    
         </div> 
-        </Provider>         
+              
     )
 }
