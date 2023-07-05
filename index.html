@@ -1,9 +1,26 @@
 <html>
     <head>
         <title>React + ESBuild</title>
+       
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        
+       
         <script type="module" src="./dist/index.js"></script>
     </head>
+    <style>
+        img {
+            height: 200;
+            width: 200;
+        }
+        #items, #favourites{
+            display:flex;
+            flex-wrap:wrap;              
+        }
+    </style>
     <body>
         <div id="root"></div>
     </body>
 </html>
+

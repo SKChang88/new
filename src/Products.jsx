@@ -1,8 +1,7 @@
 import DisplayProducts from "./DisplayProducts";
 import ProdEntry from "./ProdEntry";
 
-import {useDispatch, useSelector} from 'react-redux';
-import {retrieve} from './recordSlice';
+
 
 //Defining prodItem array  (input data)------------------------------------------------------------------------
 const defaultProducts =[
@@ -46,11 +45,10 @@ const defaultProducts =[
 
 //This function handles all things related to products-------------------------------------------------------------
 export default function Products(props){
-    const prodItems = useSelector((store)=> store.record.value);
-    const dispatch = useDispatch();
+   
     const [message, setMessage]=React.useState();                       //successful message
     const [isHidden,setIsHidden]=React.useState(false);                 //hide or show out of stock 
-   // const [prodItems, setProdItems]= React.useState(defaultProducts);   //product items
+    const [prodItems, setProdItems]= React.useState(defaultProducts);   //product items
     const [prodCode,setProdCode] = React.useState('6');                 
     const [prodName,setProdName] = React.useState('Red Jacket');
     const [prodType,setProdType] = React.useState('Athleisure');
