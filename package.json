@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "start": "esbuild ./src/index.jsx --outdir=dist --jsx=automatic --bundle --watch",
+        "build": "esbuild ./src/index.jsx --outdir=dist --jsx=automatic --bundle"
+    },
+    "dependencies": {
+        "esbuild": "^0.17.15",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
